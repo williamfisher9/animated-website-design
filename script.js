@@ -21,7 +21,15 @@ window.addEventListener("load", () => {
         title.style.bottom = "85%";
         desc.style.bottom = "65%";
         contin.style.bottom = "50%";
+
+        title.style.opacity = "1";
+        desc.style.opacity = "1";
+        contin.style.opacity = "1";
+
         runnerImg.style.transform = "translateX(-800px)";
+
+        runnerImg.style.opacity = "1";
+
         runnerImg.style.scale = "1";
     } else if(window.innerWidth < 1100){
         title.style.bottom = "85%";

@@ -5,6 +5,6 @@ barsIcon.addEventListener("click", () => {
     if(collapsableNavbar.getBoundingClientRect().top > 0){
         collapsableNavbar.style.transform = "translateY(-100px)";
     } else {
-        collapsableNavbar.style.transform = "translateY(200px)";
+        collapsableNavbar.style.transform = "translateY(290px)";
     }
 })

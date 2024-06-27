@@ -17,7 +17,7 @@ header {
     justify-content: space-around;
     align-items: center;
     
-    padding: 20px;
+    padding: 10px;
 
     position: absolute;
     top: 0;
@@ -152,6 +152,7 @@ main {
     height: calc(100dvh - 100px);
     margin-top: 100px;
     display: flex;
+    flex-direction: row-reverse;
 }
 
 main .info-wrapper {
@@ -166,6 +167,9 @@ main .runner-img-wrapper {
     flex: 1;
     width: 50%;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main .info-wrapper .info {
@@ -179,14 +183,12 @@ main .info-wrapper .info {
 main .info-wrapper .info h1 {
     position: absolute;
     bottom: -20%;
-    opacity: 0;
     transition: all 1s;
 }
 
 main .info-wrapper .info h2 {
     position: absolute;
     bottom: -20%;
-    opacity: 0;
     transition: all 0.6s;
     transition-delay: 0.6s;
 }
@@ -194,27 +196,31 @@ main .info-wrapper .info h2 {
 main .info-wrapper .info h3 {
     position: absolute;
     bottom: -20%;
-    opacity: 0;
     transition: all 0.6s;
     transition-delay: 1.2s;
 }
 
-main .runner-img-wrapper #runner-img {
-    position: absolute;
-    right: -700px;
-    transition: all 1.5s;
-    transition-delay: 0.8s;
-    width: 600px;
-    height: 600px;
-    scale: 1.7;
-    opacity: 0;
+@media only screen and (min-width: 1100px) {
+    main .runner-img-wrapper #runner-img {
+        position: absolute;
+        right: -700px;
+        transition: all 1.5s;
+        transition-delay: 0.8s;
+        width: 600px;
+        height: 600px;
+        scale: 1.7;
+        opacity: 0;
+    }
 }
+
 
 @media only screen and (min-width: 900px) {
     header .bars-icon {
         display: none;
     }
 }
+
+
 
 @media only screen and (max-width: 1100px) {
     header .buttons {
@@ -223,26 +229,6 @@ main .runner-img-wrapper #runner-img {
 
     header ul .hide-below-1100{
         display: none;
-    }
-
-    main {
-        flex-direction: column;
-        height: 500px;
-    }
-
-    main .runner-img-wrapper {
-        display: none;
-    }
-
-    main .info-wrapper {
-        width: 100%;
-    }
-    
-    main .info-wrapper .info {
-        width: 80%;
-        height: 80%;
-        font-size: 20px;
-        margin-left: 0;
     }
 }
 
@@ -273,5 +259,64 @@ main .runner-img-wrapper #runner-img {
 @media only screen and (max-width: 300px) {
     header > .logo > h1 {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 428px) {
+    main {
+        flex-direction: column;
+    }
+
+    main .runner-img-wrapper {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    main .runner-img-wrapper #runner-img {
+        position: absolute;
+        transition: all 1.5s;
+        transition-delay: 0.8s;
+        bottom: -300px;
+        width: 300px;
+        height: 300px;
+    }
+
+    main .info-wrapper {
+        width: 100%;
+    }
+    
+    main .info-wrapper .info {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: -100%;
+        left: 0;
+        overflow: hidden;
+        margin-left: 0;
+
+        transition: bottom 1s;
+        transition-delay: 1.5s;
+
+        padding: 20px;
+    }
+    
+    main .info-wrapper .info h1 {
+        position: relative;
+        font-size: 1.5rem;
+        margin-top: 10xp;
+    }
+    
+    main .info-wrapper .info h2 {
+        position: relative;
+        font-size: 1.25rem;
+        
+        margin-top: 10xp;
+    }
+    
+    main .info-wrapper .info h3 {
+        position: relative;
+        font-size: 1rem;
+        margin-top: 10xp;
     }
 }

@@ -74,24 +74,25 @@ header > .buttons > .btn {
     border: none;
     outline: none;
     background-color: rgb(36, 102, 104);
-    padding: 10px 30px;
+    padding: 10px 0px;
     color: #fff;
     cursor: pointer;
+    transition: all 0.2s;
+    width: 100px;
 }
 
 header > .buttons > .btn:hover {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: #000;
+    border-radius: 15px;
 }
 
 header > .buttons > .btn1 {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-radius: 15px;
+    border-top-left-radius: 0px;
 }
 
 header > .buttons > .btn2 {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-radius: 15px;
+    border-top-right-radius: 0px;
 }
 
 header ul li > a {
